@@ -24,6 +24,10 @@ app.put('/products/:id', api.editProduct);
 
 app.delete('/products/:id', api.deleteProduct);
 
+app.get('/orders', api.listOrders);
+
+app.post('/orders', api.createOrder);
+
 app.use(middleware.handleError);
 
 app.use(middleware.notFound);

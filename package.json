@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node server/server.js"
+    "serve": "node server/server.js",
+    "populate-db": "node server/script/import-products.js",
+    "start-db": "mongod --dbpath ./data"
   },
   "keywords": [],
   "author": "",
