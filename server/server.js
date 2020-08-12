@@ -4,7 +4,8 @@ const express = require('/usr/lib/node_modules/express');
 const bodyParser = require('/usr/lib/node_modules/body-parser');
 const cookieParser = require('cookie-parser');
 const api = require('./api');
-const auth = require('./auth');
+// const auth = require('./auth');
+const auth = require('./auth-jwt');
 const middleware = require('./middleware');
 
 const port = process.env.PORT || 1337;
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 app.use(cookieParser());
 
-auth.setMiddleware(app);
+//auth.setMiddleware(app);
 
 app.post('/login', auth.authenticate, auth.login);
 
